@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- Existing head content -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
@@ -21,25 +22,30 @@
             color: #ffffff;
             line-height: 1.6;
             font-weight: 700, 300;
-            
+
         }
 
-       
+
 
         .header {
             padding: 2rem;
             display: flex;
-            justify-content: space-between;  /* Logo on the left, menu on the right */
-            align-items: center;  /* Vertically align logo and menu */
-            max-width: 1400px;  /* Set the same max-width as the portfolio-grid */
-            margin: 0 auto;  /* Center the header on the page */
-            
-}
+            justify-content: space-between;
+            /* Logo on the left, menu on the right */
+            align-items: center;
+            /* Vertically align logo and menu */
+            max-width: 1400px;
+            /* Set the same max-width as the portfolio-grid */
+            margin: 0 auto;
+            /* Center the header on the page */
+
+        }
 
 
         .logo {
-            flex: 1;  /* Let the logo take space on the left */
-}
+            flex: 1;
+            /* Let the logo take space on the left */
+        }
 
         .logo img {
             max-height: 60px;
@@ -48,31 +54,37 @@
             padding-right: 40px;
         }
 
-        
-        
+
+
         .section {
             display: flex;
-            justify-content: flex-end;  /* Align menu items to the right */
-            gap: 1.5rem;  /* Space between buttons */
-            flex: 1;  /* Ensure it adjusts with flex */
+            justify-content: flex-end;
+            /* Align menu items to the right */
+            gap: 1.5rem;
+            /* Space between buttons */
+            flex: 1;
+            /* Ensure it adjusts with flex */
             margin-bottom: 0;
-            white-space: nowrap;     /* Prevent text wrapping */
-}
+            white-space: nowrap;
+            /* Prevent text wrapping */
+        }
 
         .section-btn {
             background: none;
             border: none;
             font-size: 1rem;
             cursor: pointer;
-            padding: 0.75rem 1.5rem;  /* Increase padding to make buttons wider */
+            padding: 0.75rem 1.5rem;
+            /* Increase padding to make buttons wider */
             transition: all 0.3s ease;
             position: relative;
             color: #ffffff;
             font-weight: 700;
             letter-spacing: 0.05em;
-            white-space: nowrap;     /* Prevent text wrapping */
-   
-}
+            white-space: nowrap;
+            /* Prevent text wrapping */
+
+        }
 
         .section-btn::after {
             content: '';
@@ -84,7 +96,7 @@
             background: #ffffff;
             transition: all 0.3s ease;
             transform: translateX(-50%);
-}
+        }
 
         .section-btn.active::after {
             width: 100%;
@@ -98,7 +110,7 @@
             .categories {
                 gap: 1rem;
             }
-            
+
             .portfolio-grid {
                 grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
                 padding: 1rem;
@@ -111,142 +123,136 @@
             .modal-content {
                 padding: 1rem;
             }
-            
+
             .navbar {
-    position: relative;
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-}
+                position: relative;
+                width: 100%;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+            }
 
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 2rem;
-    padding: 2rem;
-    border-radius: 0.5rem;
-}
+            .nav-links {
+                list-style: none;
+                display: flex;
+                gap: 2rem;
+                padding: 2rem;
+                border-radius: 0.5rem;
+            }
 
-.nav-links li a {
-    color: black;
-    text-decoration: none;
-    font-size: 1em;
-    font-weight: 700;
-}
+            .nav-links li a {
+                color: black;
+                text-decoration: none;
+                font-size: 1em;
+                font-weight: 700;
+            }
 
-.menu-toggle {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-}
+            .menu-toggle {
+                display: none;
+                flex-direction: column;
+                cursor: pointer;
+            }
 
-.menu-toggle .bar {
-    width: 25px;
-    height: 3px;
-    background-color: white;
-    margin: 4px 0;
-    transition: 0.3s;
-}
+            .menu-toggle .bar {
+                width: 25px;
+                height: 3px;
+                background-color: white;
+                margin: 4px 0;
+                transition: 0.3s;
+            }
 
-/* Responsive styling */
-@media (max-width: 768px) {
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        width: 75%;
-        text-align: center;
-        background-color: white;
-        position: absolute;
-        top: 55px; /* Position below the navbar */
-        right: 0;  /* Align to the right */
-    }
+            /* Responsive styling */
+            @media (max-width: 768px) {
+                .nav-links {
+                    display: none;
+                    flex-direction: column;
+                    width: 135%;
+                    text-align: center;
+                    background-color: white;
+                    position: absolute;
+                    top: 55px;
+                    /* Position below the navbar */
+                    right: 0;
+                    /* Align to the right */
+                }
 
-    .nav-links.active {
-        display: flex;
-    }
+                .nav-links.active {
+                    display: flex;
+                }
 
-    .menu-toggle {
-        display: flex;
-        position: absolute;
-        
-        right: 1em;
-    }
+                .menu-toggle {
+                    display: flex;
+                    position: absolute;
 
-        }
-        
-        
-        
-       
-        
-       
-        
-        
-        
+                    right: 1em;
+                }
+
+            }
+
     </style>
 </head>
+
 <body>
-   
+
 
     <header class="header">
         <div class="logo">
             <img onclick="navigateTo('mobile.html')" src="assets/00_ygm/logotext.png" alt="YGM">
         </div>
-        
+
         <nav class="navbar">
-        <div class="menu-toggle" id="menu-toggle">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </div>
-        <ul class="nav-links" id="nav-links">
-            <li><a href="mobile.html">HOME</a></li>
-            <li><a href="portfoliomobile.html">WORK</a></li>
-            <li><a href="contactmobile.html">CONTACT</a></li>
-        </ul>
-    </nav>
-        
+            <div class="menu-toggle" id="menu-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="mobile.html">HOME</a></li>
+                <li><a href="portfoliomobile.html">WORK</a></li>
+                <li><a href="contactmobile.html">CONTACT</a></li>
+            </ul>
+        </nav>
+
     </header>
-    
-    
-        
+
+
+
 
     <!-- Footer -->
-<footer style="background: #111; padding: 2rem; text-align: center; color: #ffffff; margin-top: 2rem;">
-    <h1 style="font-size: 1.5rem; margin-bottom: 1rem;">GET IN TOUCH</h1>
-    
-    <!-- Contact Information -->
-    <p style="margin: 0.5rem 0; font-weight: 400;">
-        <strong>EMAIL:</strong> <a href="mailto:youremail@example.com" style="color: #ffffff; text-decoration: none;">yan.groulxmaurer@hotmail.com</a>
-    </p>
+    <footer style="background: #111; padding: 2rem; text-align: center; color: #ffffff; margin-top: 2rem;">
+        <h1 style="font-size: 1.5rem; margin-bottom: 1rem;">GET IN TOUCH</h1>
 
-    <!-- Social Media Icons -->
-    <div style="margin-top: 1rem; font-size: 1.5rem;">
-        <a href="https://www.instagram.com/ygm.graphics/" target="_blank" style="margin: 0 1rem; color: #ffffff; text-decoration: none;" aria-label="Instagram">
-            <i class="fab fa-instagram"></i>
-        </a>
-        <a href="https://www.behance.net/yangmaurer" target="_blank" style="margin: 0 1rem; color: #ffffff; text-decoration: none;" aria-label="Behance">
-            <i class="fab fa-behance"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/yangmaurer/" target="_blank" style="margin: 0 1rem; color: #ffffff; text-decoration: none;" aria-label="LinkedIn">
-            <i class="fab fa-linkedin"></i>
-        </a>
-    </div>
-</footer>
+        <!-- Contact Information -->
+        <p style="margin: 0.5rem 0; font-weight: 400;">
+            <strong>EMAIL:</strong> <a href="mailto:youremail@example.com" style="color: #ffffff; text-decoration: none;">yan.groulxmaurer@hotmail.com</a>
+        </p>
+
+        <!-- Social Media Icons -->
+        <div style="margin-top: 1rem; font-size: 1.5rem;">
+            <a href="https://www.instagram.com/ygm.graphics/" target="_blank" style="margin: 0 1rem; color: #ffffff; text-decoration: none;" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.behance.net/yangmaurer" target="_blank" style="margin: 0 1rem; color: #ffffff; text-decoration: none;" aria-label="Behance">
+                <i class="fab fa-behance"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/yangmaurer/" target="_blank" style="margin: 0 1rem; color: #ffffff; text-decoration: none;" aria-label="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+            </a>
+        </div>
+    </footer>
 
     <div style="text-align: center;">
-    
-<img src="assets/00_ygm/render.png" alt="Graphic Design" style="width: 50%; height: auto; border-radius: 0.5rem;">
-        
-        </div>
+
+        <img src="assets/00_ygm/render.png" alt="Graphic Design" style="width: 50%; height: auto; border-radius: 0.5rem;">
+
+    </div>
 
     <script>
-        
         document.getElementById('menu-toggle').addEventListener('click', function() {
-    const navLinks = document.getElementById('nav-links');
-    navLinks.classList.toggle('active');
-});
-        
+            const navLinks = document.getElementById('nav-links');
+            navLinks.classList.toggle('active');
+        });
+
         document.addEventListener('DOMContentLoaded', () => {
             const items = document.querySelectorAll('.portfolio-item');
             const categoryBtns = document.querySelectorAll('.category-btn');
@@ -258,7 +264,7 @@
 
             let galleryImages = [];
 
-            
+
 
             // Show all items initially
             setTimeout(() => {
@@ -276,7 +282,7 @@
             categoryBtns.forEach(btn => {
                 btn.addEventListener('click', () => {
                     const category = btn.getAttribute('data-category');
-                    
+
                     categoryBtns.forEach(b => b.classList.remove('active'));
                     btn.classList.add('active');
 
@@ -297,44 +303,46 @@
             });
 
             // Modal functionality
-                items.forEach(item => {
-                    item.addEventListener('click', () => {
-                        const title = item.querySelector('.item-title').textContent;
-                        const images = item.getAttribute('data-images').split(',');  // Fetch images from data-images attribute
+            items.forEach(item => {
+                item.addEventListener('click', () => {
+                    const title = item.querySelector('.item-title').textContent;
+                    const images = item.getAttribute('data-images').split(','); // Fetch images from data-images attribute
 
-                        modalTitle.textContent = title;
-                        modalDescription.textContent = item.getAttribute('data-text');
+                    modalTitle.textContent = title;
+                    modalDescription.textContent = item.getAttribute('data-text');
 
-            // Clear previous gallery images
-                        modalGallery.innerHTML = '';
+                    // Clear previous gallery images
+                    modalGallery.innerHTML = '';
 
-            // Add new images to the gallery
-                        images.forEach((imgSrc, index) => {
-                            const imgElement = document.createElement('img');
-                            imgElement.src = imgSrc.trim();  // Clean up any extra spaces
-                            imgElement.alt = `${title} image ${index + 1}`;
-                            modalGallery.appendChild(imgElement);
+                    // Add new images to the gallery
+                    images.forEach((imgSrc, index) => {
+                        const imgElement = document.createElement('img');
+                        imgElement.src = imgSrc.trim(); // Clean up any extra spaces
+                        imgElement.alt = `${title} image ${index + 1}`;
+                        modalGallery.appendChild(imgElement);
+                    });
+
+                    modal.classList.add('active');
+                });
             });
 
-            modal.classList.add('active');
+            // Close modal
+            modalClose.addEventListener('click', () => {
+                modal.classList.remove('active');
+            });
+
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.classList.remove('active');
+                }
+            });
         });
-    });
 
-    // Close modal
-    modalClose.addEventListener('click', () => {
-        modal.classList.remove('active');
-    });
-
-    modal.addEventListener('click', (e) => {
-        if (e.target === modal) {
-            modal.classList.remove('active');
-        }
-    });
-});
         function navigateTo(page) {
-        window.location.href = page;
-    }
-        
+            window.location.href = page;
+        }
+
     </script>
 </body>
+
 </html>
