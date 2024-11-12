@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Existing head content -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - ygmgraphics</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Vina+Sans&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/jpg" href="assets/00_ygm/favicon.jpg">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Rajdhani', sans-serif;
+        }
+
+        body {
+            background: #000000;
+            color: #ffffff;
+            line-height: 1.6;
+            font-weight: 700, 300;
+            
+        }
+
+       
+
+        .header {
+            padding: 2rem;
+            display: flex;
+            justify-content: space-between;  /* Logo on the left, menu on the right */
+            align-items: center;  /* Vertically align logo and menu */
+            max-width: 1400px;  /* Set the same max-width as the portfolio-grid */
+            margin: 0 auto;  /* Center the header on the page */
+            
+}
+
+
+        .logo {
+            flex: 1;  /* Let the logo take space on the left */
+}
+
+        .logo img {
+            max-height: 60px;
+            width: auto;
+            display: inline-block;
+            padding-right: 40px;
+        }
+
+        
+        
+        .section {
+            display: flex;
+            justify-content: flex-end;  /* Align menu items to the right */
+            gap: 1.5rem;  /* Space between buttons */
+            flex: 1;  /* Ensure it adjusts with flex */
+            margin-bottom: 0;
+            white-space: nowrap;     /* Prevent text wrapping */
+}
+
+        .section-btn {
+            background: none;
+            border: none;
+            font-size: 1rem;
+            cursor: pointer;
+            padding: 0.75rem 1.5rem;  /* Increase padding to make buttons wider */
+            transition: all 0.3s ease;
+            position: relative;
+            color: #ffffff;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            white-space: nowrap;     /* Prevent text wrapping */
+   
+}
+
+        .section-btn::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 1.5px;
+            background: #ffffff;
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+}
+
+        .section-btn.active::after {
+            width: 100%;
+        }
+
+        .section-btn:hover::after {
+            width: 100%;
+        }
+
+        @media (max-width: 768px) {
+            .categories {
+                gap: 1rem;
+            }
+            
+            .portfolio-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+                padding: 1rem;
+            }
+
+            .logo img {
+                max-height: 40px;
+            }
+
+            .modal-content {
+                padding: 1rem;
+            }
+        }
+        
+        
+        
+        .container {
+            display: flex;         /* Aligns items horizontally */
+            align-items: center;   /* Centers text vertically with image */
+            gap: 7rem;             /* Space between image and text */
+        }
+        
+        .container img {
+            width: 30rem;          /* Adjust image size as needed */
+            height: auto;          /* Keeps image proportions */
+            border-radius: 0.5rem;    /* Optional: rounded corners */
+        }
+        
+        
+        
+    </style>
+</head>
+<body>
+   
+
+    <header class="header">
+        <div class="logo">
+            <img onclick="navigateTo('desktop.html')" src="assets\00_ygm\logotext.png" alt="YGM">
+        </div>
+        
+        <nav class="section">
+    <button class="section-btn active" data-category="home" onclick="navigateTo('desktop.html')">HOME</button>
+    <button class="section-btn" data-category="portfolio" onclick="navigateTo('portfolio.html')">WORK</button>
+    <button class="section-btn" data-category="contact" onclick="navigateTo('contact.html')">CONTACT</button>
+</nav>
+        
+    </header>
+    
+    <main style="margin-right: 7rem; margin-left: 6rem; margin-top: 1rem;">
+        
+        <div class="container" style="background-color: #333; padding: 4rem; border-radius: 0.5rem; min-width: 80rem;">
+        <div> 
+            
+            <h1 style="font-size: 5.5rem; line-height: 0.85; font-weight: 500; font-family: 'Vina Sans', sans-serif;">FULL DESIGN SERVICE, ALL IN ONE PLACE</h1>
+            
+            <p style="margin-top: 1.5rem; font-weight: 700; font-size: 1.5rem;">I help businesses in need of stunning visuals by providing <u style="color: #bae787;">all kinds</u> of design services.</p>
+            
+            <p style="margin-top: 1rem; font-size: 1.2rem;">From sleek branding and editorial design, eye-catching vector illustrations to sharp 3D models and renders, I take pride in my ability to tackle a wide range of design projects. With transparent pricing, a clear process and a quick and efficient iterating, working with me is simple from start to finish. </p>
+            
+            <div>
+                
+                <p style="margin-bottom: 1rem; font-weight: 400; font-size: 1.2rem; margin-top: 1rem;">Send me an e-mail for a custom quote!</p>
+                
+                <p style="margin-bottom: 1.5rem; font-weight: 700; font-size: 1.5rem;">Ready to make it happen?</p>
+                
+                 
+                <a href="contact.html" style="display: inline-block; background: #ffffff; color: #000000; font-weight: 700; padding: 0.75rem 1.5rem; border-radius: 0.5rem; text-decoration: none; transition: background 0.3s ease;">
+                                CONTACT ME 
+                </a>
+            </div>
+           
+            
+            </div>
+            
+            <img src="assets/02_images/home2.jpg" alt="Descriptive text of image">
+        </div>
+        
+        <div style="margin-top: 4rem;">
+        <h1 style="text-align: center; margin-bottom: 2rem;">DESIGN SERVICES</h1>
+        <div style="display: flex; justify-content: space-between; gap: 2rem; flex-wrap: wrap; min-width: 80rem;">
+            
+            <!-- Graphic Design Section -->
+            
+            <div style="flex: 1; text-align: center; background: #333; padding: 2rem; border-radius: 0.5rem;">
+                
+                <h3  style="margin-bottom: 1.5rem;">GRAPHIC DESIGN</h3>
+               
+                <img src="assets/02_images/graphicdesign.jpg" alt="Graphic Design" style="width: 100%; height: auto; border-radius: 0.5rem;">
+                
+                <p style="margin-top: 1.5rem; font-weight: 600; font-size: 1.2rem;">Creative and unique visuals that capture your brand identity.</p>
+                
+                <ul style="text-align: left; margin-top: 1.5rem; padding-left: 1rem; display: flex; justify-content: space-between; gap: 2rem;">
+                    <div> 
+                        <li>Branding and logo</li>
+                        <li>Editorial and print</li>
+                        <li>Packaging</li>
+                        <li>Image editing</li>
+                    </div>
+                    <div>
+                        <li>Web and mobile UI/UX</li>
+                        <li>Vector illustration</li>
+                        <li>Typography</li>
+                    </div>
+                    
+                </ul>
+                
+            </div>
+
+            <!-- Product Photography Section -->
+            
+             <div style="flex: 1; text-align: center; background: #333; padding: 2rem; border-radius: 0.5rem;">
+                
+                <h3  style="margin-bottom: 1.5rem;">PRODUCT DESIGN</h3>
+               
+                <img src="assets/02_images/productdesign.jpg" alt="Graphic Design" style="width: 100%; height: auto; border-radius: 0.5rem;">
+                
+                <p style="margin-top: 1.5rem; font-weight: 600; font-size: 1.2rem;">Professional product shots that highlight your products in the best light.</p>
+                
+                <ul style="text-align: left; margin-top: 1.5rem; padding-left: 1rem; display: flex; justify-content: space-between; gap: 2rem;">
+                    <div> 
+                        <li>Product photography</li>
+                        <li>Product animation</li>
+                        <li>Packaging rendering</li>
+                    </div>
+                    <div>
+                        <li>Environmental design</li>
+                        <li>Scene creation</li>
+                        <li>Architectural 3D render</li>
+                    </div>
+                    
+                </ul>
+                
+            </div>
+            <!-- 3D Art Section -->
+             <div style="flex: 1; text-align: center; background: #333; padding: 2rem; border-radius: 0.5rem;">
+                
+                <h3  style="margin-bottom: 1.5rem;">3D MODELING</h3>
+               
+                <img src="assets/02_images/3dart.jpg" alt="Graphic Design" style="width: 100%; height: auto; border-radius: 0.5rem;">
+                
+                <p style="margin-top: 1.5rem; font-weight: 600; font-size: 1.2rem;">Clean models for your video game, 3D prints or product prototypes.</p>
+                
+                <ul style="text-align: left; margin-top: 1.5rem; padding-left: 1rem; display: flex; justify-content: space-between; gap: 2rem;">
+                    <div> 
+                        <li>Video game modeling</li>
+                        <li>3D printable objects</li>
+                        <li>Prototyping</li>
+                    </div>
+                    <div>
+                        <li>Texturing and rendering</li>
+                        <li>Stylized models</li>
+                        <li>Realistic models</li>
+                    </div>
+                    
+                </ul>
+                
+            </div>
+            </div>
+            
+            <div style="display: flex; justify-content: space-between; gap: 2rem; flex-wrap: wrap; min-width: 80rem; display: none;">
+            
+            <!-- Graphic Design Section -->
+            
+            <div style="flex: 1; text-align: center; background: #555; padding: 2rem; border-bottom-left-radius: 0.5rem; border-bottom-right-radius: 0.5rem;">
+                
+               
+                
+                
+                <h3>STARTING AT</h3>
+                 <h1>$ 475<sup style="font-size: 50%;">.00</sup> CAD</h1>
+                <h1>€ 315<sup style="font-size: 50%;">.00</sup> EUR</h1>
+                
+                
+                
+            </div>
+
+            <!-- Product Photography Section -->
+            
+             <div style="flex: 1; text-align: center; background: #555; padding: 2rem; border-bottom-left-radius: 0.5rem; border-bottom-right-radius: 0.5rem;">
+                
+                 <h3>STARTING AT</h3>
+                 <h1>$ 775<sup style="font-size: 50%;">.00</sup> CAD</h1>
+                 <h1>€ 515<sup style="font-size: 50%;">.00</sup> EUR</h1>
+                
+                
+                
+            </div>
+            <!-- 3D Art Section -->
+             <div style="flex: 1; text-align: center; background: #555; padding: 2rem; border-bottom-left-radius: 0.5rem; border-bottom-right-radius: 0.5rem;">
+                
+                <h3>STARTING AT</h3>
+                 <h1>$ 675<sup style="font-size: 50%;">.00</sup> CAD</h1>
+                 <h1>€ 450<sup style="font-size: 50%;">.00</sup> EUR</h1>
+                
+                
+                
+            </div>
+            </div>
+            
+            
+            <div>
+            <div style="text-align: center; margin-top: 3rem;">
+                <h1>PROCESS</h1>
+            
+                </div>
+                
+                <div style="display: flex; justify-content: space-between; gap: 2rem; flex-wrap: wrap; margin-top: 3rem;">
+            
+            <!-- Graphic Design Section -->
+            
+            <div style="flex: 1; text-align: center; background: #333; padding: 2rem; border-radius: 0.5rem;">
+                
+                <h3  style="margin-bottom: 1.5rem;">1. CONTACT</h3>
+               
+                <i class="fa-solid fa-paper-plane" style="font-size: 4rem; color: #87e7e4;"></i>
+                
+                <p style="margin-top: 1.5rem; font-weight: 600; font-size: 1.2rem;">Contact me via e-mail so that we can plan a call to discuss your needs. Feel free to include pictures of projects of mine (or not) that you would like to replicate!</p>
+            
+                
+            </div>
+
+            <!-- Product Photography Section -->
+            
+             <div style="flex: 1; text-align: center; background: #333; padding: 2rem; border-radius: 0.5rem;">
+                
+                <h3  style="margin-bottom: 1.5rem;">2. DISCUSSION</h3>
+               
+                <i class="fa-solid fa-phone" style="font-size: 4rem; color: #87e7c2;"></i>
+                
+                <p style="margin-top: 1.5rem; font-weight: 600; font-size: 1.2rem;">We talk about what you need and when you need it, we share ideas and I make sure I understand the project perfectly so that I can get to work on solid grounds.</p>
+                
+                
+                
+            </div>
+            <!-- 3D Art Section -->
+             <div style="flex: 1; text-align: center; background: #333; padding: 2rem; border-radius: 0.5rem;">
+                
+                <h3  style="margin-bottom: 1.5rem;">3. DESIGN</h3>
+               
+                <i class="fa-solid fa-pen-nib" style="font-size: 4rem; color: #87e78f;"></i>
+                
+                <p style="margin-top: 1.5rem; font-weight: 600; font-size: 1.2rem;">I get to work on your project, sending you iterations of the design, improving it with your insights and making it perfect for final delivery.</p>
+                
+                
+                
+            </div>
+                    
+                    <div style="flex: 1; text-align: center; background: #333; padding: 2rem; border-radius: 0.5rem;">
+                
+                <h3  style="margin-bottom: 1.5rem;">4. DELIVERY</h3>
+               
+                <i class="fa-solid fa-file-export" style="font-size: 4rem; color: #a5e787;"></i>
+                
+                <p style="margin-top: 1.5rem; font-weight: 600; font-size: 1.2rem;">I send the final digital files to you. These could be anything: JPG, PNG, PSD, AI, EPS, PDF, OBJ, STL, PPT... You get the point!</p>
+                
+                
+                
+            </div>
+                    
+                    <div style="flex: 1; text-align: center; background: #333; padding: 2rem; border-radius: 0.5rem;">
+                
+                <h3  style="margin-bottom: 1.5rem;">5. REVISIONS</h3>
+               
+                <i class="fa-solid fa-arrows-rotate" style="font-size: 4rem; color: #bae787;"></i>
+                
+                <p style="margin-top: 1.5rem; font-weight: 600; font-size: 1.2rem;">You have two weeks to ask me for revisions if something comes up that we didn't see before, free of charge!</p>
+                
+                
+                
+            </div>
+            </div>
+                
+            </div>
+            
+            
+             <div style="text-align: center; margin-top: 3rem;">
+        <h1>SOFTWARES & TOOLS</h1>
+            
+        <div style="background-color: #333; padding: 2rem; text-align: center; margin-top: 2rem; border-radius: 0.5rem">
+            <div style="display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap;">
+                <img src="assets/01_logos/blender_icon_256x256.png" alt="Logo 1" style="max-height: 3rem;">
+                <img src="assets/01_logos/Cinema_4D_Logo_White_Text.png" alt="Logo 2" style="max-height: 3rem;">
+                <img src="assets/01_logos/Redshift_Logo_Red_Black_Primary.png" alt="Logo 3" style="max-height: 3rem;">
+                <img src="assets/01_logos/adobe-photoshop-logo-2021.svg" alt="Logo 4" style="max-height: 3rem;">
+                <img src="assets/01_logos/adobe-Illustrator-logo.svg" alt="Logo 4" style="max-height: 3rem;">
+                <img src="assets/01_logos/Adobe_InDesign_logo_PNG1.png" alt="Logo 4" style="max-height: 3rem;">
+                <img src="assets/01_logos/adobe-after-effects-logo.svg" alt="Logo 4" style="max-height: 3rem;">
+                <img src="assets/01_logos/Brackets_Icon.svg" alt="Logo 4" style="max-height: 3rem;">
+            </div>
+        </div>
+            </div>
+    </div>
+
+            
+    </main>
+    
+    
+        
+        
+
+    <!-- Footer -->
+<footer style="background: #111; padding: 2rem; text-align: center; color: #ffffff; margin-top: 2rem;">
+    <h1 style="font-size: 1.5rem; margin-bottom: 1rem;">GET IN TOUCH</h1>
+    
+    <!-- Contact Information -->
+    <p style="margin: 0.5rem 0; font-weight: 400;">
+        <strong>EMAIL:</strong> <a href="mailto:youremail@example.com" style="color: #ffffff; text-decoration: none;">yan.groulxmaurer@hotmail.com</a>
+    </p>
+
+    <!-- Social Media Icons -->
+    <div style="margin-top: 1rem; font-size: 1.5rem;">
+        <a href="https://www.instagram.com/ygm.graphics/" target="_blank" style="margin: 0 1rem; color: #ffffff; text-decoration: none;" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.behance.net/yangmaurer" target="_blank" style="margin: 0 1rem; color: #ffffff; text-decoration: none;" aria-label="Behance">
+            <i class="fab fa-behance"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/yangmaurer/" target="_blank" style="margin: 0 1rem; color: #ffffff; text-decoration: none;" aria-label="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+        </a>
+    </div>
+</footer>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const items = document.querySelectorAll('.portfolio-item');
+            const categoryBtns = document.querySelectorAll('.category-btn');
+            const modal = document.querySelector('.modal');
+            const modalClose = modal.querySelector('.modal-close');
+            const modalTitle = modal.querySelector('.modal-title');
+            const modalDescription = modal.querySelector('.modal-description');
+            const modalGallery = modal.querySelector('.modal-gallery');
+
+            let galleryImages = [];
+
+            
+
+            // Show all items initially
+            setTimeout(() => {
+                items.forEach(item => item.classList.add('visible'));
+            }, 100);
+
+            // Set initial state to show only graphic design items
+            items.forEach(item => {
+                if (item.getAttribute('data-category') !== 'graphicdesign') {
+                    item.style.display = 'none';
+                }
+            });
+
+            // Category filtering
+            categoryBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const category = btn.getAttribute('data-category');
+                    
+                    categoryBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+
+                    items.forEach(item => {
+                        item.classList.remove('visible');
+                        setTimeout(() => {
+                            if (item.getAttribute('data-category') === category) {
+                                item.style.display = 'block';
+                                setTimeout(() => {
+                                    item.classList.add('visible');
+                                }, 50);
+                            } else {
+                                item.style.display = 'none';
+                            }
+                        }, 300);
+                    });
+                });
+            });
+
+            // Modal functionality
+                items.forEach(item => {
+                    item.addEventListener('click', () => {
+                        const title = item.querySelector('.item-title').textContent;
+                        const images = item.getAttribute('data-images').split(',');  // Fetch images from data-images attribute
+
+                        modalTitle.textContent = title;
+                        modalDescription.textContent = item.getAttribute('data-text');
+
+            // Clear previous gallery images
+                        modalGallery.innerHTML = '';
+
+            // Add new images to the gallery
+                        images.forEach((imgSrc, index) => {
+                            const imgElement = document.createElement('img');
+                            imgElement.src = imgSrc.trim();  // Clean up any extra spaces
+                            imgElement.alt = `${title} image ${index + 1}`;
+                            modalGallery.appendChild(imgElement);
+            });
+
+            modal.classList.add('active');
+        });
+    });
+
+    // Close modal
+    modalClose.addEventListener('click', () => {
+        modal.classList.remove('active');
+    });
+
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            modal.classList.remove('active');
+        }
+    });
+});
+        function navigateTo(page) {
+        window.location.href = page;
+    }
+        
+    </script>
+</body>
+</html>

@@ -5,8 +5,8 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - ygmgraphics</title>
-    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Home - ygmgraphics</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Vina+Sans&display=swap" rel="stylesheet">
     <link rel="icon" type="image/jpg" href="assets/00_ygm/favicon.jpg">
     <style>
         * {
@@ -20,7 +20,8 @@
             background: #000000;
             color: #ffffff;
             line-height: 1.6;
-            font-weight: 700;
+            font-weight: 700, 300;
+            
         }
 
        
@@ -32,6 +33,7 @@
             align-items: center;  /* Vertically align logo and menu */
             max-width: 1400px;  /* Set the same max-width as the portfolio-grid */
             margin: 0 auto;  /* Center the header on the page */
+            
 }
 
 
@@ -45,6 +47,8 @@
             display: inline-block;
             padding-right: 40px;
         }
+
+        
         
         .section {
             display: flex;
@@ -107,7 +111,78 @@
             .modal-content {
                 padding: 1rem;
             }
+            
+            .navbar {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+    border-radius: 0.5rem;
+}
+
+.nav-links li a {
+    color: black;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: 700;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+    transition: 0.3s;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 75%;
+        text-align: center;
+        background-color: white;
+        position: absolute;
+        top: 55px; /* Position below the navbar */
+        right: 0;  /* Align to the right */
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: flex;
+        position: absolute;
+        
+        right: 1em;
+    }
+
         }
+        
+        
+        
+       
+        
+       
+        
+        
+        
     </style>
 </head>
 <body>
@@ -115,28 +190,32 @@
 
     <header class="header">
         <div class="logo">
-            <img onclick="navigateTo('desktop.html')" src="assets\00_ygm\logotext.png" alt="YGM">
+            <img onclick="navigateTo('mobile.html')" src="assets/00_ygm/logotext.png" alt="YGM">
         </div>
         
-        <nav class="section">
-    <button class="section-btn" data-category="home" onclick="navigateTo('desktop.html')">HOME</button>
-    <button class="section-btn" data-category="portfolio" onclick="navigateTo('portfolio.html')">WORK</button>
-    <button class="section-btn active" data-category="contact" onclick="navigateTo('contact.html')">CONTACT</button>
-</nav>
+        <nav class="navbar">
+        <div class="menu-toggle" id="menu-toggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="mobile.html">HOME</a></li>
+            <li><a href="portfoliomobile.html">WORK</a></li>
+            <li><a href="contactmobile.html">CONTACT</a></li>
+        </ul>
+    </nav>
         
     </header>
     
-    <main>
+    
         
-        
-    </main>
 
     <!-- Footer -->
 <footer style="background: #111; padding: 2rem; text-align: center; color: #ffffff; margin-top: 2rem;">
-    <p style="font-size: 1.5rem; margin-bottom: 1rem;">GET IN TOUCH</p>
+    <h1 style="font-size: 1.5rem; margin-bottom: 1rem;">GET IN TOUCH</h1>
     
     <!-- Contact Information -->
-    
     <p style="margin: 0.5rem 0; font-weight: 400;">
         <strong>EMAIL:</strong> <a href="mailto:youremail@example.com" style="color: #ffffff; text-decoration: none;">yan.groulxmaurer@hotmail.com</a>
     </p>
@@ -152,10 +231,9 @@
         <a href="https://www.linkedin.com/in/yangmaurer/" target="_blank" style="margin: 0 1rem; color: #ffffff; text-decoration: none;" aria-label="LinkedIn">
             <i class="fab fa-linkedin"></i>
         </a>
-        
     </div>
 </footer>
-    
+
     <div style="text-align: center;">
     
 <img src="assets/00_ygm/render.png" alt="Graphic Design" style="width: 50%; height: auto; border-radius: 0.5rem;">
@@ -163,6 +241,12 @@
         </div>
 
     <script>
+        
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+    const navLinks = document.getElementById('nav-links');
+    navLinks.classList.toggle('active');
+});
+        
         document.addEventListener('DOMContentLoaded', () => {
             const items = document.querySelectorAll('.portfolio-item');
             const categoryBtns = document.querySelectorAll('.category-btn');
