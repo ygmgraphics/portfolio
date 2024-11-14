@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redirecting...</title>
+    <title>ygmgraphics</title>
     <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/jpg" href="assets/00_ygm/favicon.jpg">
     <script>
         function detectDevice() {
             // Check if device is mobile
-            const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) 
-                || window.innerWidth <= 768;
-            
+            const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ||
+                window.innerWidth <= 768;
+
             // Redirect based on device type
             if (isMobile) {
                 window.location.href = 'mobile.html';
             } else {
-                window.location.href = 'desktop.html';
+                window.location.href = 'home.html';
             }
         }
 
@@ -29,11 +30,15 @@
             clearTimeout(window.resizeTimer);
             window.resizeTimer = setTimeout(detectDevice, 250);
         };
+
     </script>
 </head>
+
 <body style="background-color: black; font-family: Rajdhani, sans-serif; font-weight: 700; font-size: 3rem;">
     <div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
         <p style="color: white">LOADING...</p>
     </div>
+
 </body>
+
 </html>

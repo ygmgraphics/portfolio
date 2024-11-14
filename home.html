@@ -145,6 +145,20 @@
             /* Optional: rounded corners */
         }
 
+        .caption {
+            position: absolute;
+            bottom: 0;
+            width: 30rem;
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 16px;
+            font-weight: 500;
+            border-bottom-left-radius: 0.5rem;
+            border-bottom-right-radius: 0.5rem;
+        }
+        
     </style>
 </head>
 
@@ -153,11 +167,11 @@
 
     <header class="header">
         <div class="logo">
-            <img onclick="navigateTo('desktop.html')" src="assets\00_ygm\logotext.png" alt="YGM">
+            <img onclick="navigateTo('home.html')" src="assets\00_ygm\logotext.png" alt="YGM">
         </div>
 
         <nav class="section">
-            <button class="section-btn active" data-category="home" onclick="navigateTo('desktop.html')">HOME</button>
+            <button class="section-btn active" data-category="home" onclick="navigateTo('home.html')">HOME</button>
             <button class="section-btn" data-category="portfolio" onclick="navigateTo('portfolio.html')">WORK</button>
             <button class="section-btn" data-category="contact" onclick="navigateTo('contact.html')">CONTACT</button>
         </nav>
@@ -189,8 +203,10 @@
 
 
             </div>
-
-            <img src="assets/02_images/home2.jpg" alt="Descriptive text of image">
+            <div>
+                <img src="assets/02_images/home2.jpg" alt="Descriptive text of image">
+                <div class="caption">Hey there! I'm Yan, I'm a cool designer, and an even cooler guy.</div>
+            </div>
         </div>
 
         <div style="margin-top: 4rem;">
@@ -347,7 +363,7 @@
 
 
                     </div>
-                   
+
                     <div style="flex: 1; text-align: center; background: #333; padding: 2rem; border-radius: 0.5rem;">
 
                         <h3 style="margin-bottom: 1.5rem;">3. DESIGN</h3>
@@ -396,11 +412,12 @@
                         <img src="assets/01_logos/blender_icon_256x256.png" alt="Logo 1" style="max-height: 3rem;">
                         <img src="assets/01_logos/Cinema_4D_Logo_White_Text.png" alt="Logo 2" style="max-height: 3rem;">
                         <img src="assets/01_logos/Redshift_Logo_Red_Black_Primary.png" alt="Logo 3" style="max-height: 3rem;">
+                        <img src="assets/01_logos/Brackets_Icon.svg" alt="Logo 4" style="max-height: 3rem;">
                         <img src="assets/01_logos/adobe-photoshop-logo-2021.svg" alt="Logo 4" style="max-height: 3rem;">
                         <img src="assets/01_logos/adobe-Illustrator-logo.svg" alt="Logo 4" style="max-height: 3rem;">
                         <img src="assets/01_logos/Adobe_InDesign_logo_PNG1.png" alt="Logo 4" style="max-height: 3rem;">
                         <img src="assets/01_logos/adobe-after-effects-logo.svg" alt="Logo 4" style="max-height: 3rem;">
-                        <img src="assets/01_logos/Brackets_Icon.svg" alt="Logo 4" style="max-height: 3rem;">
+
                     </div>
                 </div>
             </div>
